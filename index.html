@@ -48,7 +48,9 @@
 </head>
 
 <body>
-   <a-scene cursor="rayOrigin: mouse"
+   <a-scene
+    cursor="rayOrigin: mouse; fuse: false"
+  raycaster="objects: .clickeable"
     background="color: #F2F1F6"
     fog="type: linear; color: #F2F1F6; near: 10; far: 35"
     shadow="type: pcfsoft"
@@ -236,7 +238,14 @@
     </a-light>
 
     <!-- Punto de vista elevado, mirando ligeramente hacia abajo -->
-    <a-entity position="3 3 30" rotation="-16 7 0"></a-entity>>
+    <a-entity position="3 3 30" rotation="-16 7 0"></a-entity>
+    <a-entity
+    camera
+    position="2 1.6 5"
+    rotation="0 45 0"
+    look-controls="pointerLockEnabled: false"
+    wasd-controls="acceleration: 15; fly: false">
+  </a-entity>
     
   </a-scene>
 </body>
