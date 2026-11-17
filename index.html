@@ -213,11 +213,10 @@
         <a-sphere position="-1.3 2 -2.2" scale="0.4 0.4 0.4" material="transparent: true; opacity: 0.3"
      color="#edff21"> </a-sphere> 
 
-      <a-entity
-  cursor="rayOrigin: mouse; fuse: false"
-  raycaster="objects: .clickeable; far: 30">
-</a-entity>
-  
+
+
+      </a-entity>
+    </a-entity>
 
     <!-- Luz suave y sombra que ancla la figura al suelo -->
     <a-light
@@ -237,14 +236,8 @@
     </a-light>
 
     <!-- Punto de vista elevado, mirando ligeramente hacia abajo -->
-    <a-entity position="3 3 30">
-      <a-entity
-        camera="fov: 55"
-        wasd-controls="acceleration: 10; fly: false"
-        rotation="-16 7 0">
-      </a-entity>
-    </a-entity>
-
+    <a-entity position="3 3 30" rotation="-16 7 0"></a-entity>>
+    
   </a-scene>
 </body>
 </html>
