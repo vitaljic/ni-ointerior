@@ -48,7 +48,7 @@
 </head>
 
 <body>
-   <a-scene cursor="rayOrigin: mouse"
+   <a-scene 
     background="color: #F2F1F6"
     fog="type: linear; color: #F2F1F6; near: 10; far: 35"
     shadow="type: pcfsoft"
@@ -66,6 +66,11 @@
         material="color: #A13B78; roughness: 1">
       </a-mixin>
     </a-assets>
+
+    <a-entity
+  cursor="rayOrigin: mouse; fuse: false"
+  raycaster="objects: .clickeable; far: 30">
+</a-entity>
 
     <!-- Espacio blanco amplio -->
     <a-plane
@@ -245,8 +250,11 @@
     <!-- Punto de vista elevado, mirando ligeramente hacia abajo -->
     <a-entity position="3 3 30">
       <a-entity
-        camera="fov: 55"
-        wasd-controls="acceleration: 10; fly: false"
+       id="camara"
+  camera
+  position="0 1.6 4"
+  look-controls="mouseEnabled: true; pointerLockEnabled: false"
+  wasd-controls="acceleration: 15; fly: false"
         rotation="-16 7 0">
       </a-entity>
     </a-entity>
